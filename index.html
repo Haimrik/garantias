@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Garantias</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarButtons" aria-controls="navbarButtons" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- <div class="collapse navbar-collapse" id="navbarButtons">
+        <div class="navbar-nav">
+          <a href="#" class="nav-item active">
+            <div class="title">Garantias</div>
+            <div class="subtitle">Organize a ordem de garantias</div>
+          </a>
+
+          <a href="#" class="nav-item ">
+            <div class="title">Menu 1</div>
+            <div class="subtitle">Organize a ordem de garantias</div>
+          </a>
+
+          <a href="#" class="nav-item">
+            <div class="title">Menu 2</div>
+            <div class="subtitle">Organize a ordem de garantias</div>
+          </a>
+
+          <a href="#" class="nav-item">
+            <div class="title">Menu 3</div>
+            <div class="subtitle">Organize a ordem de garantias</div>
+          </a>
+
+          <a href="#" class="nav-item">
+            <div class="title">Menu 4</div>
+            <div class="subtitle">Organize a ordem de garantias</div>
+          </a>
+        </div>
+      </div> -->
+    </nav>
+
+    <div class="content-container">
+      <div class="sell-container containerList" id="garanteeContainer">
+          <p class="garantee-titles">
+            Ordem de garantias de <input id="clientId" value="Default"><input id="activeUser" style="display: none;" />
+          </p>
+            <div id="garantee-list" class="connectedSortable" >
+
+                <div class="card addCard hiddenCard ui-state-disabled">
+                  <div class="">
+                    <img src="assets/img/plus.png" class="image"/>
+                  </div>
+                </div>
+
+                <div class="card addCard newCard ui-state-disabled">
+
+                  <div class="noHover">
+                    <img src="assets/img/newCard.png" class="image"/>
+                  </div>
+                  <span class="title noHover">Adicionar Ativo</span>
+                  <span class="title hover">Pesquisar</span>
+                  <div class="hover">
+                    <input type="text" id="newGarantee">
+                    <input type="text" id="icon" style="display: none">
+                    <input type="text" id="value" style="display: none">
+                  </div>
+                  <button type="button" id="newCardButton" class="hover btn btn-info" type='submit' value='Submit'>Adicionar</button>
+                </div>
+            </div>
+
+      </div>
+
+      <div class="dontsell-container containerList" id="blacklistContainer">
+          <p class="garantee-titles">
+            Ativos em Blacklist (que não podem ser alocados em garantia)
+          </p>
+          <div id="blacklist" class="connectedSortable" >
+
+              <div class="card addCard hiddenCard ui-state-disabled">
+                <div class="">
+                  <img src="assets/img/plus.png" class="image"/>
+                </div>
+              </div>
+
+              <div class="card addCard newCard ui-state-disabled">
+
+                <div class="noHover">
+                  <img src="assets/img/newCard.png" class="image"/>
+                </div>
+                <span class="title noHover">Adicionar Ativo</span>
+                <span class="title hover">Pesquisar</span>
+                <div class="hover">
+                  <input type="text" id="newBlacklistActive">
+                  <input type="text" id="dontsellIcon" style="display: none">
+                  <input type="text" id="dontsellValue" style="display: none">
+                </div>
+                <button type="button" id="newCardBlacklistButton" class="hover btn btn-info" type='submit' value='Submit'>Adicionar</button>
+              </div>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="alertModalLabel">Modificar default</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Deseja realmente modificar a lista Default? Se você fizer isso, mudanças no Default não refletirão mais neste cliente.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" id="confirmButton">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
